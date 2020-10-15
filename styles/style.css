@@ -1,1 +1,52 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #55d6aa;
+  border: 1px solid;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  list-style: none;
+  width: 60vw;
+  max-width: 350px;
+}
+
+nav li {
+  font-size: 16px;
+  position: relative;
+  border: 1px solid;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  text-transform: uppercase;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: #444;
+  position: absolute;
+}
+
+nav a:hover::after {
+  width: 100%;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+}
+/*# sourceMappingURL=style.css.map */
