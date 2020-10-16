@@ -9,8 +9,8 @@ header {
   border: 1px solid;
 }
 
-nav {
-  ul {
+.navbar {
+  &__menu {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -19,19 +19,19 @@ nav {
     max-width: 350px;
   }
 
-  li {
+  &__item {
     font-size: 16px;
     position: relative;
     border: 1px solid;
   }
 
-  a {
+  &__link {
     text-decoration: none;
     color: #444;
     text-transform: uppercase;
   }
 
-  a::after {
+  &__link::after {
     content: '';
     display: block;
     height: 5px;
@@ -40,7 +40,7 @@ nav {
     position: absolute;
   }
 
-  a:hover::after {
+  &__link:hover::after {
     width: 100%;
     transition: all ease-in-out 400ms;
   }

@@ -1,6 +1,6 @@
 # Description
 
-Personal portfolio handcrafted with HTML, CSS/Sass, and JavaScript
+Personal portfolio handcrafted with HTML, CSS(Sass + BEM), and JavaScript
 
 Deployed to AWS using Grunt for the CD pipeline. Visit my site here:
 ---TBD---

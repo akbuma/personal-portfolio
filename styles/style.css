@@ -10,7 +10,7 @@ header {
   border: 1px solid;
 }
 
-nav ul {
+.navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,19 +23,19 @@ nav ul {
   max-width: 350px;
 }
 
-nav li {
+.navbar__item {
   font-size: 16px;
   position: relative;
   border: 1px solid;
 }
 
-nav a {
+.navbar__link {
   text-decoration: none;
   color: #444;
   text-transform: uppercase;
 }
 
-nav a::after {
+.navbar__link::after {
   content: '';
   display: block;
   height: 5px;
@@ -44,7 +44,7 @@ nav a::after {
   position: absolute;
 }
 
-nav a:hover::after {
+.navbar__link:hover::after {
   width: 100%;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
