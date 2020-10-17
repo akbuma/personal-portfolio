@@ -15,13 +15,14 @@ header {
   justify-content: center;
   align-items: center;
   height: 80px;
+
   &__menu {
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto; // overrides the center positioning for toggle
     justify-content: space-between;
     list-style: none;
-    width: 60vw;
-    max-width: 350px;
+    width: 70vw;
+    max-width: 450px;
     border: 1px solid red;
     height: 20px;
   }
@@ -40,7 +41,7 @@ header {
   &__link::after {
     content: '';
     display: block;
-    height: 3px;
+    height: 2px;
     width: 0%;
     background-color: white;
     position: absolute;
@@ -49,5 +50,27 @@ header {
   &__link:hover::after {
     width: 100%;
     transition: all ease-in-out 400ms;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    &__menu {
+      z-index: -1;
+    }
+
+    &__toggle {
+      position: absolute;
+      right: 5%;
+    }
+
+    &__toggle .bar {
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      background: #fff;
+      display: block;
+      transition: all 0.3s ease-in-out;
+    }
   }
 }
