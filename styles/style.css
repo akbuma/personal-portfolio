@@ -6,41 +6,56 @@ body {
 }
 
 header {
-  background-color: #55d6aa;
-  border: 1px solid;
+  background-color: pink;
+  height: 100px;
+}
+
+.navbar {
+  background: purple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
 }
 
 .navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 auto;
   list-style: none;
   width: 60vw;
   max-width: 350px;
+  border: 1px solid red;
+  height: 20px;
 }
 
 .navbar__item {
   font-size: 16px;
   position: relative;
-  border: 1px solid;
 }
 
 .navbar__link {
   text-decoration: none;
-  color: #444;
+  color: white;
   text-transform: uppercase;
 }
 
 .navbar__link::after {
   content: '';
   display: block;
-  height: 5px;
+  height: 3px;
   width: 0%;
-  background-color: #444;
+  background-color: white;
   position: absolute;
 }
 
