@@ -67,7 +67,24 @@ header {
 
 @media screen and (max-width: 960px) {
   .navbar__menu {
-    z-index: -1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    position: absolute;
+    width: 10000px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .navbar__menu.active {
+    background: pink;
+    top: 0;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 100vh;
+    font-size: 20rem;
   }
   .navbar__toggle {
     position: absolute;
@@ -81,6 +98,17 @@ header {
     display: block;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+  }
+  .navbar__toggle--is-active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .navbar__toggle--is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar__toggle--is-active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

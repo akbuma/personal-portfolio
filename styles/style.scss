@@ -21,7 +21,7 @@ header {
     margin: 0 auto; // overrides the center positioning for toggle
     justify-content: space-between;
     list-style: none;
-    width: 70vw;
+    // width: 70vw;
     max-width: 450px;
     border: 1px solid red;
     height: 20px;
@@ -56,7 +56,23 @@ header {
 @media screen and (max-width: 960px) {
   .navbar {
     &__menu {
-      z-index: -1;
+      display: grid;
+      grid-template-columns: auto;
+      position: absolute;
+      transition: all 0.3s ease;
+      // z-index: -1;
+      // opacity: 1;
+      // top: -1000px;
+    }
+
+    &__menu.active {
+      background: pink;
+      top: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 99;
+      height: 100vh;
+      font-size: 20rem;
     }
 
     &__toggle {
@@ -71,6 +87,18 @@ header {
       background: #fff;
       display: block;
       transition: all 0.3s ease-in-out;
+    }
+
+    &__toggle--is-active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &__toggle--is-active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    &__toggle--is-active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
   }
 }
