@@ -5,6 +5,7 @@ body {
 }
 
 header {
+  // position: relative;
   background-color: pink;
   height: 100px;
 }
@@ -23,7 +24,7 @@ header {
     list-style: none;
     width: 70vw;
     max-width: 450px;
-    border: 1px solid red;
+    border: 1px solid yellow;
     height: 20px;
   }
 
@@ -60,6 +61,8 @@ header {
       grid-template-columns: auto;
       position: absolute;
       transition: all 0.3s ease;
+      border: 1px solid red;
+      width: 100vw;
       // z-index: -1;
       // opacity: 1;
       // top: -1000px;
@@ -67,11 +70,14 @@ header {
 
     &__menu.active {
       background: pink;
-      top: 0;
+      position: relative;
+      top: 0px;
+      bottom: 0px;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 99;
       height: 100vh;
+      max-width: 100vw;
       font-size: 20rem;
     }
 
