@@ -6,12 +6,11 @@ body {
 }
 
 header {
-  background-color: pink;
   height: 10vh;
+  border: 1px solid black;
 }
 
 .navbar {
-  background: purple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +34,6 @@ header {
   list-style: none;
   width: 70vw;
   max-width: 450px;
-  border: 1px solid black;
   height: 20px;
 }
 
@@ -89,12 +87,13 @@ header {
     opacity: 0;
   }
   .navbar__menu.active {
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    border: 1px solid black;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+    border-radius: 10px;
     opacity: 1;
   }
   .navbar__menu a {
-    border: 1px solid red;
     font-size: 2rem;
     text-align: center;
   }
