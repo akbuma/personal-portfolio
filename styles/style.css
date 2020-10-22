@@ -7,7 +7,6 @@ body {
 
 header {
   height: 10vh;
-  border: 1px solid black;
 }
 
 .navbar {
@@ -61,6 +60,104 @@ header {
   width: 100%;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 5px solid orange;
+}
+
+.home__details {
+  position: relative;
+  border: 1px solid;
+}
+
+.home__name {
+  border: 1px solid;
+}
+
+.home__job {
+  border: 1px solid;
+}
+
+.home__hr {
+  left: 5%;
+  background-color: #ff470f;
+  border: none;
+  height: 2px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 0px;
+  width: 4rem;
+}
+
+.home__portrait-image {
+  border-radius: 50%;
+}
+
+.home__contact-info {
+  border: 1px solid green;
+}
+
+.home__contact-bullet {
+  margin-bottom: 0.8rem;
+}
+
+.home__social {
+  border: 1px solid red;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.home__social li {
+  border: 1px solid;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.home__social a {
+  border: 1px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  height: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0.5;
+  width: 2rem;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  will-change: opacity, transform;
+}
+
+.home__social a:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 960px) {

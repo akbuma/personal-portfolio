@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"
+    ></script>
     <title>Aaron Bumanglag</title>
   </head>
 
@@ -34,7 +38,51 @@
       </nav>
     </header>
 
-    <section class="home"></section>
+    <section class="home">
+      <div class="home__details">
+        <h1 class="home__name">Aaron Bumanglag</h1>
+        <p class="home__job">Full-Stack Web Developer</p>
+        <hr class="home__hr" />
+        <ul class="home__contact-info fa-ul">
+          <li class="home__contact-bullet">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span
+            >aaron.k.bumanglag@gmail.com
+          </li>
+          <li class="home__contact-bullet">
+            <span class="fa-li"><i class="fas fa-phone"></i></span>808-392-2848
+          </li>
+          <li class="home__contact-bullet">
+            <span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Los
+            Angeles, CA
+          </li>
+        </ul>
+        <ul class="home__social">
+          <li>
+            <a><i class="fab fa-github"></i> </a>
+          </li>
+          <li>
+            <a>
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <figure class="home__portrait">
+        <div class="home__portrait-shadow"></div>
+        <img
+          class="home__portrait-image"
+          src="images/aaron.png"
+          srcset="
+            images/aaron.png    1x,
+            images/aaron@2x.png 2x,
+            images/aaron@3x.png 3x
+          "
+          alt="Portrait of Aaron Bumanglag"
+          width="240"
+          height="240"
+        />
+      </figure>
+    </section>
 
     <!-- Scripts -->
     <script src="app.js"></script>

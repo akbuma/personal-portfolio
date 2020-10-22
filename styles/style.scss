@@ -6,7 +6,6 @@ body {
 
 header {
   height: 10vh;
-  border: 1px solid black;
 }
 
 .navbar {
@@ -47,6 +46,86 @@ header {
   &__link:hover::after {
     width: 100%;
     transition: all ease-in-out 400ms;
+  }
+}
+
+.home {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 5px solid orange;
+
+  &__details {
+    position: relative;
+    border: 1px solid;
+  }
+
+  &__name {
+    border: 1px solid;
+  }
+  &__job {
+    border: 1px solid;
+  }
+
+  &__hr {
+    left: 5%;
+    background-color: #ff470f;
+    border: none;
+    // content: '';
+    height: 2px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 0px;
+    // transform-origin: center left;
+    width: 4rem;
+  }
+
+  &__portrait-image {
+    border-radius: 50%;
+  }
+
+  &__contact-info {
+    border: 1px solid green;
+  }
+
+  &__contact-bullet {
+    margin-bottom: 0.8rem;
+  }
+
+  &__social {
+    border: 1px solid red;
+    justify-content: flex-start;
+    display: flex;
+    margin-top: 1.5rem;
+    list-style: none;
+
+    li {
+      border: 1px solid;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 0.5rem;
+      text-align: center;
+    }
+
+    a {
+      border: 1px solid blue;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      height: 2rem;
+      justify-content: center;
+      opacity: 0.5;
+      width: 2rem;
+
+      transition-property: opacity, transform;
+      will-change: opacity, transform;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.25);
+        cursor: pointer;
+      }
+    }
   }
 }
 
