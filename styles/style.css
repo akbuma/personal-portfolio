@@ -73,6 +73,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   border: 5px solid orange;
+  width: 70vw;
+  margin: 0 auto;
 }
 
 .home__details {
@@ -217,6 +219,21 @@ header {
   .navbar__toggle--is-active .bar:nth-child(3) {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
+  }
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 5px solid green;
+  }
+  .home__portrait {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
 }
 /*# sourceMappingURL=style.css.map */
