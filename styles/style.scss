@@ -86,6 +86,29 @@ header {
     width: 4rem;
   }
 
+  &__portrait-shadow {
+    &--outer {
+      height: 260px;
+      width: 260px;
+      background-color: red;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--inner {
+      height: 250px;
+      width: 250px;
+      background-color: orange;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   &__portrait-image {
     border-radius: 50%;
   }
@@ -184,6 +207,58 @@ header {
   }
 }
 
+.skills {
+  background-color: green;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__front-end {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__back-end {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__hex {
+    &--top {
+      width: 0;
+      border-bottom: 30px solid #6c6;
+      border-left: 52px solid #66c;
+      border-right: 52px solid #cc6;
+    }
+
+    &--mid {
+      width: 104px;
+      height: 60px;
+      background-color: #6c6;
+    }
+
+    &--bot {
+      display: block;
+      width: 0;
+      border-top: 30px solid #6c6;
+      border-left: 52px solid #66c;
+      border-right: 52px solid #cc6;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .navbar {
     position: relative;
@@ -204,7 +279,7 @@ header {
     }
 
     &__menu.active {
-      transition: all 0.5s ease-in-out;
+      // transition: all 0.5s ease-in-out;
       z-index: 1;
       opacity: 1;
     }
