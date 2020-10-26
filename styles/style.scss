@@ -208,31 +208,40 @@ header {
 }
 
 .skills {
-  background-color: green;
+  background-color: purple;
+
+  %hex-corner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
   }
+
   &__front-end {
-    width: 500px;
-    height: 500px;
+    // width: 500px;
+    // height: 500px;
     background-color: red;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @extend %hex-corner;
   }
-  &__back-end {
-    width: 500px;
-    height: 500px;
-    background-color: blue;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  &__back-end {
+    // width: 500px;
+    // height: 500px;
+    background-color: blue;
+    @extend %hex-corner;
+  }
+
+  &__tools {
+    // width: 500px;
+    // height: 500px;
+    background-color: purple;
+    @extend %hex-corner;
   }
 
   &__hex {
