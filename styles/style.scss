@@ -219,7 +219,7 @@ header {
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
   }
 
@@ -233,14 +233,14 @@ header {
   &__back-end {
     // width: 500px;
     // height: 500px;
-    background-color: blue;
+    background-color: red;
     @extend %hex-corner;
   }
 
   &__tools {
     // width: 500px;
     // height: 500px;
-    background-color: purple;
+    background-color: red;
     @extend %hex-corner;
   }
 
@@ -256,6 +256,9 @@ header {
       width: 104px;
       height: 60px;
       background-color: #6c6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &--bot {

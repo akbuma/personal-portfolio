@@ -271,9 +271,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -284,11 +284,11 @@ header {
 }
 
 .skills__back-end {
-  background-color: blue;
+  background-color: red;
 }
 
 .skills__tools {
-  background-color: purple;
+  background-color: red;
 }
 
 .skills__hex--top {
@@ -302,6 +302,15 @@ header {
   width: 104px;
   height: 60px;
   background-color: #6c6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .skills__hex--bot {
