@@ -291,16 +291,16 @@ header {
   background-color: red;
 }
 
-.skills__hex-shadow-top {
+.skills__hex--shadow-top {
   width: 0;
-  border-bottom: 15px solid #6c6;
-  border-left: 26px solid #66c;
-  border-right: 26px solid pink;
+  border-bottom: 60px solid #6c6;
+  border-left: 104px solid #66c;
+  border-right: 104px solid pink;
 }
 
-.skills__hex-shadow-mid {
-  width: 52px;
-  height: 30px;
+.skills__hex--shadow-mid {
+  width: 208px;
+  height: 120px;
   background-color: #6c6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,14 +311,18 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.skills__hex-shadow-bot {
+.skills__hex--shadow-bot {
   display: block;
   width: 0;
-  border-top: 15px solid #6c6;
-  border-left: 26px solid #66c;
-  border-right: 26px solid pink;
+  border-top: 60px solid #6c6;
+  border-left: 104px solid #66c;
+  border-right: 104px solid pink;
 }
 
 .skills__hex--top {
@@ -341,10 +345,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .skills__hex--bot {

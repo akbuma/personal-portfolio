@@ -245,26 +245,28 @@ header {
   }
 
   &__hex {
-    &-shadow-top {
+    &--shadow-top {
       width: 0;
-      border-bottom: 15px solid #6c6;
-      border-left: 26px solid #66c;
-      border-right: 26px solid pink;
+      border-bottom: 60px solid #6c6;
+      border-left: 104px solid #66c;
+      border-right: 104px solid pink;
     }
-    &-shadow-mid {
-      width: 52px;
-      height: 30px;
+    &--shadow-mid {
+      width: 208px;
+      height: 120px;
       background-color: #6c6;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      flex-direction: column;
     }
-    &-shadow-bot {
+    &--shadow-bot {
       display: block;
       width: 0;
-      border-top: 15px solid #6c6;
-      border-left: 26px solid #66c;
-      border-right: 26px solid pink;
+      border-top: 60px solid #6c6;
+      border-left: 104px solid #66c;
+      border-right: 104px solid pink;
     }
 
     &--top {
@@ -281,8 +283,6 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-
-      flex-direction: column;
     }
 
     &--bot {
