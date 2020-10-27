@@ -306,18 +306,23 @@ header {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      opacity: 0;
       z-index: -1;
       top: 20vh;
       max-width: 100vw;
       width: 60vw;
       height: 60vh;
+
+      opacity: 1;
+      transform: translateX(200%);
+      overflow-x: hidden;
+      transition: all 0.5s ease-in-out;
     }
 
     &__menu.active {
-      // transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       z-index: 1;
       opacity: 1;
+      transform: translateX(0);
     }
 
     &__menu a {
@@ -363,6 +368,13 @@ header {
 
     &__portrait {
       order: -1;
+    }
+  }
+
+  .skills {
+    &__container {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
