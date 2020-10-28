@@ -300,6 +300,53 @@ header {
   }
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'reactype-img reactype-desc'
+    'chrome-stretch-img chrome-stretch-desc';
+
+  border: 10px solid green;
+
+  &__description {
+    &--reactype {
+      grid-area: reactype-desc;
+      justify-self: center;
+      align-self: center;
+      border: 1px solid blue;
+    }
+
+    &--chrome-stretch {
+      grid-area: chrome-stretch-desc;
+      justify-self: center;
+      align-self: center;
+      border: 1px solid blue;
+    }
+  }
+
+  &__images {
+    &--reactype {
+      grid-area: reactype-img;
+      justify-self: center;
+      align-self: center;
+      border: 1px solid blue;
+      width: 400px;
+      height: auto;
+    }
+
+    &--chrome-stretch {
+      grid-area: chrome-stretch-img;
+      justify-self: center;
+      align-self: center;
+      border: 1px solid blue;
+      width: 200px;
+      height: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 960px) {
   .navbar {
     position: relative;
