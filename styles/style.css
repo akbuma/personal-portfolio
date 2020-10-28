@@ -515,5 +515,12 @@ header {
         -ms-flex-align: center;
             align-items: center;
   }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'reactype-img' 'reactype-desc' 'chrome-stretch-img' 'chrome-stretch-desc';
+  }
 }
 /*# sourceMappingURL=style.css.map */

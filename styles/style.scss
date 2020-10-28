@@ -429,4 +429,14 @@ header {
       align-items: center;
     }
   }
+
+  .projects {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'reactype-img'
+      'reactype-desc'
+      'chrome-stretch-img'
+      'chrome-stretch-desc';
+  }
 }
