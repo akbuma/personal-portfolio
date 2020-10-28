@@ -1,5 +1,5 @@
 $section-width: 70vw;
-$section-margin-top: 10px;
+$section-margin-vertical: 50px;
 
 body {
   box-sizing: border-box;
@@ -16,7 +16,6 @@ header {
   position: fixed;
   z-index: 1;
   background-color: white;
-
   width: 100%;
   border: 5px solid purple;
   display: flex;
@@ -65,9 +64,9 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  // border: 5px solid orange;
   width: $section-width;
-  margin: 0 auto;
+  margin: $section-margin-vertical auto;
+
   &__details {
     position: relative;
     border: 1px solid;
@@ -76,6 +75,7 @@ header {
   &__name {
     border: 1px solid;
   }
+
   &__job {
     border: 1px solid;
   }
@@ -166,7 +166,7 @@ header {
 .about {
   // border: 5px solid black;
   width: $section-width;
-  margin: 0 auto;
+  margin: $section-margin-vertical auto;
 
   %browser-dot {
     height: 12px;
@@ -214,6 +214,8 @@ header {
 
 .skills {
   background-color: purple;
+  width: $section-width;
+  margin: $section-margin-vertical auto;
 
   %hex-corner {
     display: flex;
@@ -309,6 +311,8 @@ header {
     'chrome-stretch-img chrome-stretch-desc';
 
   border: 10px solid green;
+  width: $section-width;
+  margin: $section-margin-vertical auto;
 
   &__description {
     &--reactype {
