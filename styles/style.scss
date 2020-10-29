@@ -1,6 +1,11 @@
 $section-width: 70vw;
 $section-margin-vertical: 50px;
 
+%section-area {
+  width: $section-width;
+  margin: $section-margin-vertical auto;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -64,8 +69,9 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: $section-width;
-  margin: $section-margin-vertical auto;
+  // width: $section-width;
+  // margin: $section-margin-vertical auto;
+  @extend %section-area;
 
   &__details {
     position: relative;
@@ -368,7 +374,7 @@ header {
       width: 60vw;
       height: 60vh;
 
-      opacity: 1;
+      opacity: 0;
       transform: translateX(200%);
       overflow-x: hidden;
       // transition: all 0.5s ease-in-out;
@@ -379,6 +385,13 @@ header {
       z-index: 1;
       opacity: 1;
       transform: translateX(0);
+    }
+
+    &__menu.closed {
+      transition: all 0.5s ease-in-out;
+      z-index: 1;
+      opacity: 1;
+      transform: translateX(200%);
     }
 
     &__menu a {
@@ -442,5 +455,11 @@ header {
       'reactype-desc'
       'chrome-stretch-img'
       'chrome-stretch-desc';
+
+    &__images {
+      &--reactype {
+        width: 200px;
+      }
+    }
   }
 }
