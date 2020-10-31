@@ -5,7 +5,6 @@ const navbar = document.querySelector('.navbar');
 // animates navbar toggle and displays links for mobile
 const openMobileMenu = () => {
   menu.classList.toggle('navbar__toggle--is-active');
-
   // display the mobile nav
   // toggling closed class will remove the stuttering issue when switching to mobile
   if (menuLinks.classList.contains('active')) {
@@ -31,3 +30,21 @@ const repositionMenuLinks = () => {
 
 window.addEventListener('resize', repositionMenuLinks);
 menu.addEventListener('click', openMobileMenu);
+
+// intersection observer
+const home = document.querySelector('.home');
+
+const callback = (entries, observer) => {
+  console.log(entries[0]);
+  if(entries[0].isIntersecting) console.log('fired')
+}
+
+const options = {
+  root: null,
+  rootMargin: '0px 0px -90% 0px',
+  threshold: 0.1,
+}
+
+// fires the callback once the home section hits the navbar position
+const observer = new IntersectionObserver(callback, options);
+observer.observe(home);

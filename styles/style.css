@@ -1,4 +1,4 @@
-.home {
+.home, .about, .skills, .projects {
   width: 70vw;
   margin: 50px auto;
 }
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  height: 10vh;
+  height: 5vh;
   position: relative;
 }
 
@@ -20,7 +20,6 @@ header {
   z-index: 1;
   background-color: white;
   width: 100%;
-  border: 5px solid purple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,7 +29,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10vh;
+  height: 5vh;
   margin: 0 auto;
 }
 
@@ -72,6 +71,11 @@ header {
   width: 100%;
   -webkit-transition: all ease-in-out 400ms;
   transition: all ease-in-out 400ms;
+}
+
+.navbar__scrolled {
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 .home {
@@ -204,11 +208,6 @@ header {
   cursor: pointer;
 }
 
-.about {
-  width: 70vw;
-  margin: 50px auto;
-}
-
 .about .about__dots--dot-1, .about .about__dots--dot-2, .about .about__dots--dot-3 {
   height: 12px;
   width: 12px;
@@ -255,8 +254,6 @@ header {
 
 .skills {
   background-color: purple;
-  width: 70vw;
-  margin: 50px auto;
 }
 
 .skills .skills__front-end, .skills .skills__back-end, .skills .skills__tools {
@@ -372,8 +369,6 @@ header {
       grid-template-rows: auto;
       grid-template-areas: 'reactype-img reactype-desc' 'chrome-stretch-img chrome-stretch-desc';
   border: 10px solid green;
-  width: 70vw;
-  margin: 50px auto;
 }
 
 .projects__description--reactype {
@@ -540,5 +535,25 @@ header {
   .projects__images--reactype {
     width: 200px;
   }
+}
+
+.home {
+  background-color: red;
+}
+
+.navbar {
+  background-color: pink;
+}
+
+header {
+  height: 10vh;
+  background-color: blue;
+}
+
+.box {
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  margin: 0px auto;
 }
 /*# sourceMappingURL=style.css.map */
