@@ -33,10 +33,19 @@ menu.addEventListener('click', openMobileMenu);
 
 // intersection observer
 const home = document.querySelector('.home');
+const header = document.querySelector('header');
 
 const callback = (entries, observer) => {
-  console.log(entries[0]);
-  if(entries[0].isIntersecting) console.log('fired')
+  // console.log(entries[0]);
+  // if(entries[0].isIntersecting) console.log('fired')
+
+  // header section
+  const entry = entries[0];
+  if(entry.isIntersecting) {
+    console.log('true')
+  } else {
+    console.log('false')
+  }
 }
 
 const options = {
@@ -47,4 +56,5 @@ const options = {
 
 // fires the callback once the home section hits the navbar position
 const observer = new IntersectionObserver(callback, options);
-observer.observe(home);
+// observer.observe(home);
+observer.observe(header);

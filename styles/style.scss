@@ -6,6 +6,10 @@ $section-margin-vertical: 50px;
   margin: $section-margin-vertical auto;
 }
 
+* {
+  font-family: 'Saira', sans-serif;
+}
+
 body {
   box-sizing: border-box;
   padding: 0;
@@ -13,19 +17,21 @@ body {
 }
 
 header {
-  height: 5vh;
+  height: 7vh;
   position: relative;
 }
 
 .navbar {
+  border: 1px solid black;
   position: fixed;
   z-index: 1;
   background-color: white;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-content: center;
   align-items: center;
-  height: 5vh;
+  height: 7vh;
   margin: 0 auto;
 
   &__menu {
@@ -461,7 +467,7 @@ header {
 }
 
 header {
-  height: 10vh;
+  height: 5vh;
   background-color: blue;
 }
 
