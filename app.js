@@ -3,6 +3,8 @@ const mobileMenu = document.querySelector('.navbar__menu');
 const menuLinks = document.querySelectorAll('.navbar__link');
 const navbar = document.querySelector('.navbar');
 
+let wasScrolled = false;
+
 // animates navbar toggle and displays links for mobile
 const openMobileMenu = () => {
   menuToggle.classList.toggle('navbar__toggle--is-active');
@@ -26,6 +28,21 @@ const repositionMobileMenu = () => {
       mobileMenu.classList.toggle('active');
     if (mobileMenu.classList.contains('closed'))
       mobileMenu.classList.toggle('closed');
+    
+    if(wasScrolled) {
+      navbar.classList.add('navbar--scrolled');
+      for(link of menuLinks) {
+        link.classList.add('navbar__link--scrolled-text')
+      }
+    }
+  } else {
+    if(navbar.classList.contains('navbar--scrolled')) {
+      wasScrolled = true;
+      navbar.classList.remove('navbar--scrolled');
+      for(link of menuLinks) {
+        link.classList.remove('navbar__link--scrolled-text')
+      }
+    }
   }
 };
 
@@ -38,17 +55,16 @@ const header = document.querySelector('header');
 const callback = (entries, observer) => {
   // header section
   const entry = entries[0];
-  if(window.outerWidth >= 960) {
-    if(entry.isIntersecting) {
-      navbar.classList.remove('navbar--scrolled');
-      for(link of menuLinks) {
-        link.classList.remove('navbar__link--scrolled-text')
-      }
-    } else {
-      navbar.classList.add('navbar--scrolled');
-      for(link of menuLinks) {
-        link.classList.add('navbar__link--scrolled-text')
-      }
+  if(entry.isIntersecting) {
+    wasScrolled = false;
+    navbar.classList.remove('navbar--scrolled');
+    for(link of menuLinks) {
+      link.classList.remove('navbar__link--scrolled-text')
+    }
+  } else {
+    navbar.classList.add('navbar--scrolled');
+    for(link of menuLinks) {
+      link.classList.add('navbar__link--scrolled-text')
     }
   }
 }

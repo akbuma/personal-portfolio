@@ -30,7 +30,6 @@ header {
 }
 
 .navbar {
-  border: 1px solid black;
   position: fixed;
   z-index: 1;
   background-color: white;
@@ -82,7 +81,7 @@ header {
 
   &__link:hover::after {
     width: 100%;
-    transition: all ease-in-out 150ms;
+    transition: all ease-in-out 250ms;
   }
 
   &__scrolled {
@@ -373,7 +372,7 @@ header {
   .navbar {
     position: relative;
     &__menu {
-      background-color: red;
+      background-color: black;
       padding: 0;
       position: fixed;
       display: flex;
@@ -407,6 +406,10 @@ header {
     &__menu a {
       font-size: 2rem;
       text-align: center;
+    }
+
+    &__link {
+      color: white;
     }
 
     &__toggle {
