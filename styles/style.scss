@@ -76,13 +76,13 @@ header {
     display: block;
     height: 2px;
     width: 0%;
-    background-color: black;
+    background-color: $theme-medium;
     position: absolute;
   }
 
   &__link:hover::after {
     width: 100%;
-    transition: all ease-in-out 400ms;
+    transition: all ease-in-out 150ms;
   }
 
   &__scrolled {

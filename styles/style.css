@@ -78,14 +78,14 @@ header {
   display: block;
   height: 2px;
   width: 0%;
-  background-color: black;
+  background-color: #41aea9;
   position: absolute;
 }
 
 .navbar__link:hover::after {
   width: 100%;
-  -webkit-transition: all ease-in-out 400ms;
-  transition: all ease-in-out 400ms;
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
 }
 
 .navbar__scrolled {
