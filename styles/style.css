@@ -54,6 +54,10 @@ header {
   height: 20px;
 }
 
+.navbar--scrolled {
+  background-color: black;
+}
+
 .navbar__item {
   font-size: 16px;
   position: relative;
@@ -63,6 +67,10 @@ header {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
+}
+
+.navbar__link--scrolled-text {
+  color: white !important;
 }
 
 .navbar__link::after {
@@ -546,10 +554,6 @@ header {
 
 .home {
   background-color: red;
-}
-
-.navbar {
-  background-color: pink;
 }
 
 header {

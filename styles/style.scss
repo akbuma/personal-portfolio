@@ -1,6 +1,14 @@
 $section-width: 70vw;
 $section-margin-vertical: 50px;
 
+$theme-shadow: #e8ffff;
+$theme-light: #a6f6f1;
+$theme-medium: #41aea9;
+$theme-dark: #213e3b;
+
+$navbar-bg-scroll: black;
+$navbar-text-scrolled: white;
+
 %section-area {
   width: $section-width;
   margin: $section-margin-vertical auto;
@@ -44,6 +52,10 @@ header {
     height: 20px;
   }
 
+  &--scrolled {
+    background-color: $navbar-bg-scroll;
+  }
+
   &__item {
     font-size: 16px;
     position: relative;
@@ -53,6 +65,10 @@ header {
     text-decoration: none;
     color: black;
     text-transform: uppercase;
+
+    &--scrolled-text {
+      color: $navbar-text-scrolled !important;
+    }
   }
 
   &__link::after {
@@ -462,9 +478,9 @@ header {
   background-color: red;
 }
 
-.navbar {
-  background-color: pink;
-}
+// .navbar {
+//   background-color: pink;
+// }
 
 header {
   height: 5vh;

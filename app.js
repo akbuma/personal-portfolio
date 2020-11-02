@@ -1,50 +1,53 @@
-const menu = document.querySelector('.navbar__toggle');
-const menuLinks = document.querySelector('.navbar__menu');
+const menuToggle = document.querySelector('.navbar__toggle');
+const mobileMenu = document.querySelector('.navbar__menu');
+const menuLinks = document.querySelectorAll('.navbar__link');
 const navbar = document.querySelector('.navbar');
 
 // animates navbar toggle and displays links for mobile
 const openMobileMenu = () => {
-  menu.classList.toggle('navbar__toggle--is-active');
+  menuToggle.classList.toggle('navbar__toggle--is-active');
   // display the mobile nav
   // toggling closed class will remove the stuttering issue when switching to mobile
-  if (menuLinks.classList.contains('active')) {
-    menuLinks.classList.toggle('closed');
+  if (mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.toggle('closed');
   } else {
-    menuLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
   }
 };
 
 // adds navbar__menu as child of header node for animation effects
-const repositionMenuLinks = () => {
+const repositionMobileMenu = () => {
   if (window.outerWidth >= 960) {
     // disable toggle when user widens screen
-    if (menu.classList.contains('navbar__toggle--is-active'))
-      menu.classList.toggle('navbar__toggle--is-active');
+    if (menuToggle.classList.contains('navbar__toggle--is-active'))
+      menuToggle.classList.toggle('navbar__toggle--is-active');
     // disable mobile menu when user widens screen
-    if (menuLinks.classList.contains('active'))
-      menuLinks.classList.toggle('active');
-    if (menuLinks.classList.contains('closed'))
-      menuLinks.classList.toggle('closed');
+    if (mobileMenu.classList.contains('active'))
+      mobileMenu.classList.toggle('active');
+    if (mobileMenu.classList.contains('closed'))
+      mobileMenu.classList.toggle('closed');
   }
 };
 
-window.addEventListener('resize', repositionMenuLinks);
-menu.addEventListener('click', openMobileMenu);
+window.addEventListener('resize', repositionMobileMenu);
+menuToggle.addEventListener('click', openMobileMenu);
 
 // intersection observer
-const home = document.querySelector('.home');
 const header = document.querySelector('header');
 
 const callback = (entries, observer) => {
-  // console.log(entries[0]);
-  // if(entries[0].isIntersecting) console.log('fired')
-
   // header section
   const entry = entries[0];
   if(entry.isIntersecting) {
-    console.log('true')
+    navbar.classList.remove('navbar--scrolled');
+    for(link of menuLinks) {
+      link.classList.remove('navbar__link--scrolled-text')
+    }
   } else {
-    console.log('false')
+    navbar.classList.add('navbar--scrolled');
+    for(link of menuLinks) {
+      link.classList.add('navbar__link--scrolled-text')
+    }
   }
 }
 
@@ -56,5 +59,4 @@ const options = {
 
 // fires the callback once the home section hits the navbar position
 const observer = new IntersectionObserver(callback, options);
-// observer.observe(home);
 observer.observe(header);
