@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  height: 7vh;
+  height: 11vh;
   position: relative;
 }
 
@@ -35,7 +35,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 7vh;
+  height: 11vh;
   margin: 0 auto;
 }
 
@@ -55,6 +55,8 @@ header {
 
 .navbar--scrolled {
   background-color: black;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
 }
 
 .navbar__item {
@@ -102,24 +104,26 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 70px;
 }
 
 .home__details {
   position: relative;
-  border: 1px solid;
 }
 
 .home__name {
-  border: 1px solid;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .home__job {
-  border: 1px solid;
+  margin-top: -25px;
+  font-weight: 500;
 }
 
 .home__hr {
   left: 5%;
-  background-color: #ff470f;
+  background-color: #41aea9;
   border: none;
   height: 2px;
   margin-bottom: 1.5rem;
@@ -128,10 +132,16 @@ header {
   width: 4rem;
 }
 
+.home__portrait {
+  background: 1px solid black;
+  -webkit-box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff, 20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff, 0px 0px 0px 10px #a6f6f1, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff, 20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff, 0px 0px 0px 10px #a6f6f1, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
 .home__portrait-shadow--outer {
-  height: 260px;
-  width: 260px;
-  background-color: red;
+  height: 300px;
+  width: 300px;
+  background-color: white;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,9 +155,8 @@ header {
 }
 
 .home__portrait-shadow--inner {
-  height: 250px;
-  width: 250px;
-  background-color: orange;
+  height: 245px;
+  width: 245px;
   position: relative;
   border-radius: 50%;
   display: -webkit-box;
@@ -159,14 +168,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff, 15px 15px 0px 0px #a1d8ff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff, 15px 15px 0px 0px #a1d8ff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .home__portrait-image {
   border-radius: 50%;
-}
-
-.home__contact-info {
-  border: 1px solid green;
 }
 
 .home__contact-bullet {
@@ -174,7 +181,6 @@ header {
 }
 
 .home__social {
-  border: 1px solid red;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -186,15 +192,14 @@ header {
 }
 
 .home__social li {
-  border: 1px solid;
   height: 2rem;
   width: 2rem;
+  margin-top: -0.5rem;
   margin-right: 0.5rem;
   text-align: center;
 }
 
 .home__social a {
-  border: 1px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,6 +445,7 @@ header {
 @media screen and (max-width: 960px) {
   .navbar {
     position: relative;
+    background-color: white;
   }
   .navbar__menu {
     background-color: black;
@@ -527,11 +533,34 @@ header {
         -ms-flex-direction: column;
             flex-direction: column;
     border: 5px solid green;
+    height: 550px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .home__portrait {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    margin-right: 0;
+  }
+  .home__portrait-image {
+    height: 200px;
+    width: 200px;
+  }
+  .home__name, .home__job, .home__hr, .home__social {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .home__hr {
+    margin-top: 20px;
+  }
+  .home__social {
+    width: 100px;
+    border: 1px solid black;
   }
   .skills__container {
     -webkit-box-orient: vertical;
@@ -552,10 +581,6 @@ header {
   .projects__images--reactype {
     width: 200px;
   }
-}
-
-.home {
-  background-color: red;
 }
 
 header {

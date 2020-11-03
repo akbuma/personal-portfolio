@@ -53,20 +53,20 @@ menuToggle.addEventListener('click', openMobileMenu);
 const header = document.querySelector('header');
 
 const callback = (entries, observer) => {
-  // header section
-  const entry = entries[0];
-  if(entry.isIntersecting) {
-    wasScrolled = false;
-    navbar.classList.remove('navbar--scrolled');
-    for(link of menuLinks) {
-      link.classList.remove('navbar__link--scrolled-text')
+    // header section
+    const entry = entries[0];
+    if(entry.isIntersecting) {
+      wasScrolled = false;
+      navbar.classList.remove('navbar--scrolled');
+      for(link of menuLinks) {
+        link.classList.remove('navbar__link--scrolled-text')
+      }
+    } else {
+      navbar.classList.add('navbar--scrolled');
+      for(link of menuLinks) {
+        link.classList.add('navbar__link--scrolled-text')
+      }
     }
-  } else {
-    navbar.classList.add('navbar--scrolled');
-    for(link of menuLinks) {
-      link.classList.add('navbar__link--scrolled-text')
-    }
-  }
 }
 
 const options = {
