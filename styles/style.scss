@@ -372,6 +372,15 @@ header {
   &__test {
     border-top: 2px solid $theme-medium;
   }
+
+  &__hr {
+    left: 5%;
+    background-color: $theme-medium;
+    border: none;
+    height: 2px;
+    margin: 0px auto;
+    width: 4rem;
+  }
 }
 
 .projects {
