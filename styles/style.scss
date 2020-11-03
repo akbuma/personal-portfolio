@@ -27,6 +27,7 @@ body {
 header {
   height: 11vh;
   position: relative;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -129,14 +130,14 @@ header {
   &__portrait {
     background: 1px solid black;
     // background-color: red;
-    // margin-right: -40px;
+    margin-right: -10px;
 
     -webkit-box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
       20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
-      0px 0px 0px 10px $theme-light, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      0px 0px 0px 10px $theme-medium, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
       20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
-      0px 0px 0px 10px $theme-light, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      0px 0px 0px 10px $theme-medium, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   }
 
   &__portrait-shadow {
@@ -170,10 +171,6 @@ header {
 
   &__portrait-image {
     border-radius: 50%;
-  }
-
-  &__contact-info {
-    // border: 1px solid green;
   }
 
   &__contact-bullet {
@@ -231,6 +228,11 @@ header {
   &__info {
     border: 1px solid black;
     border-radius: 0 0 5px 5px;
+
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__panel {
@@ -239,9 +241,15 @@ header {
     border-radius: 5px 5px 0 0;
   }
 
+  &__resume {
+    margin: 0px auto;
+    cursor: pointer;
+  }
+
   &__dots {
     display: flex;
     background-color: pink;
+    margin-left: 5px;
     height: 20px;
     width: 200px;
     background-color: black;
@@ -250,23 +258,23 @@ header {
 
     &--dot-1 {
       @extend %browser-dot;
-      background-color: #fc6058;
+      background-color: $theme-shadow;
     }
 
     &--dot-2 {
       @extend %browser-dot;
-      background-color: #fec02f;
+      background-color: $theme-light;
     }
 
     &--dot-3 {
       @extend %browser-dot;
-      background-color: #2aca3e;
+      background-color: $theme-medium;
     }
   }
 }
 
 .skills {
-  background-color: purple;
+  // background-color: purple;
   @extend %section-area;
 
   %hex-corner {
@@ -283,31 +291,61 @@ header {
   }
 
   &__front-end {
-    background-color: red;
+    // background-color: red;
     @extend %hex-corner;
   }
 
   &__back-end {
-    background-color: red;
+    // background-color: red;
     @extend %hex-corner;
   }
 
   &__tools {
-    background-color: red;
+    // background-color: red;
     @extend %hex-corner;
   }
 
   &__hex {
-    &--shadow-top {
+    $hex-vertical: 30px;
+    $hex-horizontal: 52px;
+    $hex-color: white;
+    $hex-shadow-color: white;
+
+    &--top {
       width: 0;
-      border-bottom: 60px solid #6c6;
-      border-left: 104px solid #66c;
-      border-right: 104px solid pink;
+      border-bottom: $hex-vertical solid $hex-color;
+      border-left: $hex-horizontal solid $theme-light; // 1.733
+      border-right: $hex-horizontal solid $theme-light;
+    }
+
+    &--mid {
+      width: $hex-horizontal * 2; // left * 2
+      height: $hex-vertical * 2; // bottom * 2
+      background-color: $hex-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--bot {
+      // display: block;
+      width: 0;
+      border-top: $hex-vertical solid $hex-color;
+      border-left: $hex-horizontal solid $theme-light;
+      border-right: $hex-horizontal solid $theme-light;
+    }
+
+    &--shadow-top {
+      display: block;
+      width: 0;
+      border-bottom: 45px solid $hex-color;
+      border-left: 78px solid $theme-medium;
+      border-right: 78px solid $theme-medium;
     }
     &--shadow-mid {
-      width: 208px;
-      height: 120px;
-      background-color: #6c6;
+      width: 156px;
+      height: 107px;
+      background-color: $hex-color;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -317,34 +355,22 @@ header {
     &--shadow-bot {
       display: block;
       width: 0;
-      border-top: 60px solid #6c6;
-      border-left: 104px solid #66c;
-      border-right: 104px solid pink;
+      border-top: 45px solid $hex-color;
+      border-left: 78px solid $theme-medium;
+      border-right: 78px solid $theme-medium;
     }
+  }
 
-    &--top {
-      width: 0;
-      border-bottom: 30px solid #6c6;
-      border-left: 52px solid #66c;
-      border-right: 52px solid #cc6;
-    }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &--mid {
-      width: 104px;
-      height: 60px;
-      background-color: #6c6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &--bot {
-      display: block;
-      width: 0;
-      border-top: 30px solid #6c6;
-      border-left: 52px solid #66c;
-      border-right: 52px solid #cc6;
-    }
+  &__test {
+    border-top: 2px solid $theme-medium;
   }
 }
 
@@ -475,15 +501,16 @@ header {
   .home {
     display: flex;
     flex-direction: column;
-    border: 5px solid green;
+    // border: 5px solid green;
 
     height: 550px;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 10px;
 
     &__portrait {
       order: -1;
-      margin-right: 0;
+      margin-right: 40px;
 
       &-image {
         height: 200px;
@@ -500,12 +527,13 @@ header {
     }
 
     &__hr {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     &__social {
       width: 100px;
-      border: 1px solid black;
+      margin-left: 60px;
+      // border: 1px solid black;
     }
   }
 
