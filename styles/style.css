@@ -394,10 +394,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.skills__test {
-  border-top: 2px solid #41aea9;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  border-radius: 5px;
 }
 
 .skills__hr {
@@ -407,6 +408,18 @@ header {
   height: 2px;
   margin: 0px auto;
   width: 4rem;
+}
+
+.skills__list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.skills__list li:before {
+  content: '\00BB \0020';
+  padding-right: 5px;
 }
 
 .projects {
@@ -503,6 +516,7 @@ header {
     -webkit-transform: translateX(200%);
             transform: translateX(200%);
     overflow-x: hidden;
+    border-radius: 5px;
   }
   .navbar__menu.active {
     -webkit-transition: all 0.5s ease-in-out;

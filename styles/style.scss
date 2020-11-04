@@ -367,10 +367,12 @@ header {
     border: 1px solid black;
     justify-content: center;
     align-items: center;
-  }
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 25px;
 
-  &__test {
-    border-top: 2px solid $theme-medium;
+    border-radius: 5px;
   }
 
   &__hr {
@@ -380,6 +382,18 @@ header {
     height: 2px;
     margin: 0px auto;
     width: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+
+    li:before {
+      content: '\00BB \0020';
+      padding-right: 5px;
+    }
   }
 }
 
@@ -451,6 +465,8 @@ header {
       opacity: 0;
       transform: translateX(200%);
       overflow-x: hidden;
+
+      border-radius: 5px;
     }
 
     &__menu.active {
