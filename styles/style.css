@@ -518,7 +518,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .navbar {
     position: relative;
     background-color: white;
@@ -546,8 +546,8 @@ header {
     width: 60vw;
     height: 60vh;
     opacity: 0;
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
+    -webkit-transform: translateX(250%);
+            transform: translateX(250%);
     overflow-x: hidden;
     border-radius: 5px;
   }
@@ -648,10 +648,6 @@ header {
             order: -1;
     margin-right: 40px;
   }
-  .home__portrait-image {
-    height: 200px;
-    width: 200px;
-  }
   .home__name, .home__job, .home__hr, .home__social {
     text-align: center;
     margin: 0 auto;
@@ -673,8 +669,23 @@ header {
             align-items: center;
   }
   .home__portrait-image {
-    height: 150px;
-    width: 150px;
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .home__name {
+    font-size: 20px;
+  }
+  .home li {
+    font-size: 13px;
+  }
+  .home__social {
+    margin-right: 75px;
+  }
+  .about__dots {
+    width: 100px;
   }
 }
 /*# sourceMappingURL=style.css.map */
