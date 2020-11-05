@@ -96,24 +96,20 @@ header {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 70px;
-  // border: 1px solid;
   @extend %section-area;
 
   &__details {
     position: relative;
-    // border: 1px solid;
   }
 
   &__name {
     font-size: 30px;
     font-weight: 600;
-    // border: 1px solid;
   }
 
   &__job {
     margin-top: -25px;
     font-weight: 500;
-    // border: 1px solid;
   }
 
   &__hr {
@@ -129,37 +125,10 @@ header {
 
   &__portrait {
     background: 1px solid black;
-    // background-color: red;
     margin-right: -10px;
-
-    // -webkit-box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
-    //   20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
-    //   0px 0px 0px 10px $theme-medium, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    // box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
-    //   20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
-    //   0px 0px 0px 10px $theme-medium, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 
     &-image {
       border: 3px solid $theme-medium;
-
-      // -webkit-box-shadow: 0px 0px 0px 8px $theme-medium,
-      //   0px 0px 0px 16px %$theme-medium, 5px 5px 15px 5px $theme-medium;
-      // box-shadow: 0px 0px 0px 8px $theme-medium, 0px 0px 0px 16px $theme-medium,
-      //   5px 5px 15px 5px $theme-medium;
-
-      // -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   10px 10px 0px 0px $theme-light, 15px 15px 0px 0px $theme-shadow,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-      // box-shadow: 5px 5px 0px 0px $theme-medium, 10px 10px 0px 0px $theme-light,
-      //   15px 15px 0px 0px $theme-shadow, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
-      // -webkit-box-shadow: 0px 20px 0px -10px #ffffff,
-      //   0px -20px 0px -10px #ffffff, 20px 0px 0px -10px #ffffff,
-      //   -20px 0px 0px -10px #ffffff, 0px 0px 0px 10px $theme-medium,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-      // box-shadow: 0px 20px 0px -10px #ffffff, 0px -20px 0px -10px #ffffff,
-      //   20px 0px 0px -10px #ffffff, -20px 0px 0px -10px #ffffff,
-      //   0px 0px 0px 10px $theme-medium, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     }
   }
 
@@ -167,7 +136,6 @@ header {
     &--outer {
       height: 300px;
       width: 300px;
-      // background-color: $theme-dark;
       background-color: white;
       border-radius: 50%;
       display: flex;
@@ -178,13 +146,11 @@ header {
     &--inner {
       height: 245px;
       width: 245px;
-      // background-color: $theme-dark;
       position: relative;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-
       -webkit-box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
         15px 15px 0px 0px #a1d8ff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
       box-shadow: 5px 5px 0px 0px #289fed, 10px 10px 0px 0px #5fb8ff,
@@ -201,14 +167,12 @@ header {
   }
 
   &__social {
-    // border: 1px solid red;
     justify-content: flex-start;
     display: flex;
     margin-top: 1.5rem;
     list-style: none;
 
     li {
-      // border: 1px solid;
       height: 2rem;
       width: 2rem;
       margin-top: -0.5rem;
@@ -217,7 +181,6 @@ header {
     }
 
     a {
-      // border: 1px solid blue;
       display: flex;
       align-items: center;
       font-size: 1.5rem;
@@ -225,7 +188,6 @@ header {
       justify-content: center;
       opacity: 0.5;
       width: 2rem;
-
       transition-property: opacity, transform;
       will-change: opacity, transform;
 
@@ -297,7 +259,6 @@ header {
 }
 
 .skills {
-  // background-color: purple;
   @extend %section-area;
 
   %hex-corner {
@@ -314,17 +275,14 @@ header {
   }
 
   &__front-end {
-    // background-color: red;
     @extend %hex-corner;
   }
 
   &__back-end {
-    // background-color: red;
     @extend %hex-corner;
   }
 
   &__tools {
-    // background-color: red;
     @extend %hex-corner;
   }
 
@@ -351,7 +309,6 @@ header {
     }
 
     &--bot {
-      // display: block;
       width: 0;
       border-top: $hex-vertical solid $hex-color;
       border-left: $hex-horizontal solid $theme-light;
@@ -365,6 +322,7 @@ header {
       border-left: 78px solid $theme-medium;
       border-right: 78px solid $theme-medium;
     }
+
     &--shadow-mid {
       width: 156px;
       height: 107px;
@@ -372,9 +330,9 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-
       flex-direction: column;
     }
+
     &--shadow-bot {
       display: block;
       width: 0;
@@ -426,11 +384,8 @@ header {
   grid-template-areas:
     'reactype-desc reactype-img'
     'chrome-stretch-desc chrome-stretch-img';
-  // border: 1px solid black;
-
   row-gap: 25px;
   column-gap: 25px;
-
   margin-top: -20px;
   border-radius: 5px;
   @extend %section-area;
@@ -450,7 +405,6 @@ header {
       grid-area: chrome-stretch-desc;
       justify-self: center;
       align-self: center;
-      // border: 1px solid blue;
     }
   }
 
@@ -459,15 +413,8 @@ header {
       grid-area: reactype-img;
       justify-self: center;
       align-self: center;
-      // border: 1px solid blue;
       width: 400px;
       height: auto;
-
-      // -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-      // box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-
       -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
         10px 10px 0px 0px $theme-shadow, 5px 5px 15px 5px rgba(0, 0, 0, 0);
       box-shadow: 5px 5px 0px 0px $theme-medium, 10px 10px 0px 0px $theme-shadow,
@@ -478,21 +425,8 @@ header {
       grid-area: chrome-stretch-img;
       justify-self: center;
       align-self: center;
-      // border: 1px solid blue;
       width: 200px;
       height: auto;
-
-      // -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   10px 10px 0px 0px $theme-light, 15px 15px 0px 0px $theme-shadow,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-      // box-shadow: 5px 5px 0px 0px $theme-medium, 10px 10px 0px 0px $theme-light,
-      //   15px 15px 0px 0px $theme-shadow, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-
-      // -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-      // box-shadow: 5px 5px 0px 0px $theme-medium,
-      //   5px 5px 15px 5px rgba(0, 0, 0, 0);
-
       -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
         10px 10px 0px 0px $theme-shadow, 5px 5px 15px 5px rgba(0, 0, 0, 0);
       box-shadow: 5px 5px 0px 0px $theme-medium, 10px 10px 0px 0px $theme-shadow,
@@ -531,7 +465,7 @@ header {
   .navbar {
     position: relative;
     background-color: white;
-    // transform: translateY(200%);
+
     &__menu {
       background-color: black;
       padding: 0;
@@ -548,7 +482,6 @@ header {
       opacity: 0;
       transform: translateX(250%);
       overflow-x: hidden;
-
       border-radius: 5px;
     }
 
@@ -606,45 +539,6 @@ header {
     }
   }
 
-  // .home {
-  //   display: flex;
-  //   flex-direction: column;
-  //   // border: 5px solid green;
-
-  //   height: 550px;
-  //   justify-content: space-evenly;
-  //   align-items: center;
-  //   margin-top: 10px;
-
-  //   &__portrait {
-  //     order: -1;
-  //     margin-right: 40px;
-
-  //     &-image {
-  //       height: 200px;
-  //       width: 200px;
-  //     }
-  //   }
-
-  //   &__name,
-  //   &__job,
-  //   &__hr,
-  //   &__social {
-  //     text-align: center;
-  //     margin: 0 auto;
-  //   }
-
-  //   &__hr {
-  //     margin-top: 10px;
-  //   }
-
-  //   &__social {
-  //     width: 100px;
-  //     margin-left: 60px;
-  //     // border: 1px solid black;
-  //   }
-  // }
-
   .skills {
     &__container {
       flex-direction: column;
@@ -669,8 +563,6 @@ header {
   .home {
     display: flex;
     flex-direction: column;
-    // border: 5px solid green;
-
     height: 550px;
     justify-content: space-evenly;
     align-items: center;
@@ -679,11 +571,6 @@ header {
     &__portrait {
       order: -1;
       margin-right: 40px;
-
-      // &-image {
-      //   height: 200px;
-      //   width: 200px;
-      // }
     }
 
     &__name,
@@ -701,7 +588,6 @@ header {
     &__social {
       width: 100px;
       margin-left: 60px;
-      // border: 1px solid black;
     }
   }
 
