@@ -241,7 +241,7 @@ header {
 .about__info {
   border: 1px solid black;
   border-radius: 0 0 5px 5px;
-  padding: 1.5rem;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,6 +686,20 @@ header {
   }
   .about__dots {
     width: 100px;
+  }
+  .about__info {
+    padding: 0.5em;
+  }
+  .about__resume {
+    margin-bottom: 5px;
+  }
+  .projects__description {
+    padding: 0.5em;
+  }
+  .about,
+  .skills,
+  .projects {
+    font-size: 0.8em;
   }
 }
 /*# sourceMappingURL=style.css.map */

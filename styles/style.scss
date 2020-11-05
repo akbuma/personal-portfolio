@@ -213,9 +213,7 @@ header {
   &__info {
     border: 1px solid black;
     border-radius: 0 0 5px 5px;
-
-    padding: 1.5rem;
-
+    padding: 1rem;
     display: flex;
     flex-direction: column;
   }
@@ -626,5 +624,25 @@ header {
     &__dots {
       width: 100px;
     }
+
+    &__info {
+      padding: 0.5em;
+    }
+
+    &__resume {
+      margin-bottom: 5px;
+    }
+  }
+
+  .projects {
+    &__description {
+      padding: 0.5em;
+    }
+  }
+
+  .about,
+  .skills,
+  .projects {
+    font-size: 0.8em;
   }
 }
