@@ -601,15 +601,6 @@ header {
     -webkit-transform: translateY(-8px) rotate(-45deg);
             transform: translateY(-8px) rotate(-45deg);
   }
-  .skills__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
 }
 
 header {
@@ -624,7 +615,25 @@ header {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
+  .skills {
+    font-size: 12px;
+  }
+  .skills__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skills__description {
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .home {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -659,22 +668,16 @@ header {
     width: 100px;
     margin-left: 60px;
   }
-  .skills__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .home__portrait-image {
     height: 180px;
     width: 180px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
+  p {
+    font-size: 12px;
+  }
   .home__name {
     font-size: 20px;
   }
@@ -682,7 +685,11 @@ header {
     font-size: 13px;
   }
   .home__social {
+    margin-top: 20px;
     margin-right: 75px;
+  }
+  .about__panel {
+    margin-top: -50px;
   }
   .about__dots {
     width: 100px;
@@ -695,6 +702,15 @@ header {
   }
   .projects__description {
     padding: 0.5em;
+  }
+  .skills__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .about,
   .skills,
