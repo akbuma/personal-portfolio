@@ -78,3 +78,17 @@ const options = {
 // fires the callback once the home section hits the navbar position
 const observer = new IntersectionObserver(callback, options);
 observer.observe(header);
+
+for(link of menuLinks) {
+  link.addEventListener('click', scrollHandler);
+}
+
+function scrollHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute('href');
+
+  document.querySelector(href).scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+}
