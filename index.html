@@ -59,10 +59,10 @@
       </ul>
       <ul class="home__social">
         <li>
-          <a><i class="fab fa-github"></i> </a>
+          <a href="https://github.com/akbuma" target="_blank"><i class="fab fa-github"></i> </a>
         </li>
         <li>
-          <a>
+          <a href="https://www.linkedin.com/in/akbuma" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
@@ -102,14 +102,16 @@
         deployed to AWS using Grunt as a CD pipeline. Feel free to checkout
         the code here :)
       </p>
-      <button class="about__resume">Dowload Resume</button>
+      <a class="about__resume" href="aaron_bumanglag_resume.pdf" target="_blank"><button
+          class="about__resume-button">Dowload
+          Resume</button></a>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="skills" id="skills">
+  <section class="skills">
     <div class="skills__container">
-      <div class="skills__front-end">
+      <div class="skills__front-end" id="skills">
         <div class="skills__hex--shadow-top"></div>
         <div class="skills__hex--shadow-mid">
           <div class="skills__hex--top"></div>
@@ -119,9 +121,8 @@
           <div class="skills__hex--bot"></div>
         </div>
         <div class="skills__hex--shadow-bot"></div>
-
         <div class="skills__description">
-          <p>Front-End</p>
+          <p class="skills__headline">Front-End</p>
           <hr class="skills__hr" />
           <ul class="skills__list">
             <li>HTML + CSS</li>
@@ -147,7 +148,7 @@
         <div class="skills__hex--shadow-bot"></div>
 
         <div class="skills__description">
-          <p>Back-End</p>
+          <p class="skills__headline">Back-End</p>
           <hr class="skills__hr" />
           <ul class="skills__list">
             <li>Node.js</li>
@@ -172,7 +173,7 @@
         </div>
         <div class="skills__hex--shadow-bot"></div>
         <div class="skills__description">
-          <p>Languages & Tools</p>
+          <p class="skills__headline">Languages & Tools</p>
           <hr class="skills__hr" />
           <ul class="skills__list">
             <li>JavaScript</li>
@@ -190,10 +191,11 @@
   </section>
 
   <!-- Projects -->
-  <section class="projects" id="projects">
-    <div class="projects__description projects__description--reactype">
+  <section class="projects">
+    <div class="projects__description projects__description--reactype" id="projects">
       <h1>ReacType</h1>
-      <p>React <span class="projects__separator">-</span> MaterialUI <span class="projects__separator">-</span>
+      <p class="projects__tools">React <span class="projects__separator">-</span> MaterialUI <span
+          class="projects__separator">-</span>
         TypeScript <span class="projects__separator">-</span> Node.js <span class="projects__separator">-</span>
         Electron</p>
       <p>A visual prototyping tool to convert 2D canvas renderings into boilerplate code for React with TypeScript.</p>
@@ -208,7 +210,8 @@
 
     <div class="projects__description projects__description--chrome-stretch">
       <h1>Chrome Stretch</h1>
-      <p>HTML <span class="projects__separator">-</span> CSS <span class="projects__separator">-</span> JavaScript</p>
+      <p class="projects__tools">HTML <span class="projects__separator">-</span> CSS <span
+          class="projects__separator">-</span> JavaScript</p>
       <p>
         Participated in a 24 hour hackathon where we were tasked to build a chrome extension tool. I created a fun
         browser widget to help users take short stretch breaks at their desk. Simply download the code, unpack the

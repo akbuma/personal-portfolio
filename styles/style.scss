@@ -1,5 +1,5 @@
 $section-width: 70vw;
-$section-margin-vertical: 50px;
+$section-margin-vertical: 75px;
 
 $theme-shadow: #e8ffff;
 $theme-light: #a6f6f1;
@@ -16,6 +16,15 @@ $navbar-text-scrolled: white;
 
 * {
   font-family: 'Saira', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $theme-medium;
+
+  &:hover {
+    color: $theme-medium;
+  }
 }
 
 body {
@@ -39,7 +48,7 @@ header {
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 11vh;
+  height: 9vh;
   margin: 0 auto;
 
   &__menu {
@@ -226,7 +235,9 @@ header {
 
   &__resume {
     margin: 0px auto;
-    cursor: pointer;
+    &-button {
+      cursor: pointer;
+    }
   }
 
   &__dots {
@@ -373,6 +384,10 @@ header {
       padding-right: 5px;
     }
   }
+
+  &__headline {
+    font-weight: 500;
+  }
 }
 
 .projects {
@@ -384,12 +399,12 @@ header {
     'chrome-stretch-desc chrome-stretch-img';
   row-gap: 25px;
   column-gap: 25px;
-  margin-top: -20px;
+  // margin-top: -20px;
   border-radius: 5px;
   @extend %section-area;
 
   &__description {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     border: 1px solid black;
     border-radius: 5px;
 
@@ -433,11 +448,17 @@ header {
   }
 
   &__separator {
-    color: $theme-medium;
+    color: black;
   }
 
   &__button {
     cursor: pointer;
+  }
+
+  &__tools {
+    font-weight: 500;
+    color: $theme-medium;
+    margin-top: -15px;
   }
 }
 
@@ -536,13 +557,6 @@ header {
       transform: translateY(-8px) rotate(-45deg);
     }
   }
-
-  // .skills {
-  //   &__container {
-  //     flex-direction: column;
-  //     align-items: center;
-  //   }
-  // }
 }
 
 header {
@@ -619,6 +633,12 @@ header {
     font-size: 12px;
   }
 
+  .navbar {
+    &__link {
+      font-size: 1rem !important;
+    }
+  }
+
   .home {
     &__name {
       font-size: 20px;
@@ -667,5 +687,17 @@ header {
   .skills,
   .projects {
     font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .home {
+    width: 800px;
+  }
+
+  .about,
+  .skills,
+  .projects {
+    width: 1100px;
   }
 }
