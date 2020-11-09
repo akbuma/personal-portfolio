@@ -18,15 +18,6 @@ $navbar-text-scrolled: white;
   font-family: 'Saira', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: $theme-medium;
-
-  &:hover {
-    color: $theme-medium;
-  }
-}
-
 body {
   box-sizing: border-box;
   padding: 0;
@@ -173,6 +164,15 @@ header {
 
   &__contact-bullet {
     margin-bottom: 0.8rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $theme-medium;
+
+    &:hover {
+      color: $theme-medium;
+    }
   }
 
   &__social {

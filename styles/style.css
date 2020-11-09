@@ -7,15 +7,6 @@
   font-family: 'Saira', sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: #41aea9;
-}
-
-a:hover {
-  color: #41aea9;
-}
-
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -191,6 +182,15 @@ header {
 
 .home__contact-bullet {
   margin-bottom: 0.8rem;
+}
+
+.home__link {
+  text-decoration: none;
+  color: #41aea9;
+}
+
+.home__link:hover {
+  color: #41aea9;
 }
 
 .home__social {
