@@ -227,6 +227,11 @@ header {
     flex-direction: column;
   }
 
+  &__link {
+    text-decoration: none;
+    color: $theme-medium;
+  }
+
   &__panel {
     height: 20px;
     background-color: black;
@@ -396,10 +401,10 @@ header {
   grid-template-rows: auto;
   grid-template-areas:
     'reactype-desc reactype-img'
+    'speed-typer-desc speed-typer-img'
     'chrome-stretch-desc chrome-stretch-img';
   row-gap: 25px;
   column-gap: 25px;
-  // margin-top: -20px;
   border-radius: 5px;
   @extend %section-area;
 
@@ -419,11 +424,29 @@ header {
       justify-self: center;
       align-self: center;
     }
+
+    &--speed-typer {
+      grid-area: speed-typer-desc;
+      justify-self: center;
+      align-self: center;
+    }
   }
 
   &__images {
     &--reactype {
       grid-area: reactype-img;
+      justify-self: center;
+      align-self: center;
+      width: 400px;
+      height: auto;
+      -webkit-box-shadow: 5px 5px 0px 0px $theme-medium,
+        10px 10px 0px 0px $theme-shadow, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      box-shadow: 5px 5px 0px 0px $theme-medium, 10px 10px 0px 0px $theme-shadow,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+
+    &--speed-typer {
+      grid-area: speed-typer-img;
       justify-self: center;
       align-self: center;
       width: 400px;
@@ -469,6 +492,8 @@ header {
     grid-template-areas:
       'reactype-img'
       'reactype-desc'
+      'speed-typer-img'
+      'speed-typer-desc'
       'chrome-stretch-img'
       'chrome-stretch-desc';
 
