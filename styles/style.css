@@ -4,7 +4,7 @@
 }
 
 * {
-  font-family: 'Saira', sans-serif;
+  font-family: "Saira", sans-serif;
 }
 
 body {
@@ -76,7 +76,7 @@ header {
 }
 
 .navbar__link::after {
-  content: '';
+  content: "";
   display: block;
   height: 2px;
   width: 0%;
@@ -438,7 +438,7 @@ header {
 }
 
 .skills__list li:before {
-  content: '\00BB \0020';
+  content: "\00BB \0020";
   padding-right: 5px;
 }
 
@@ -453,7 +453,7 @@ header {
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: 'reactype-desc reactype-img' 'speed-typer-desc speed-typer-img' 'chrome-stretch-desc chrome-stretch-img';
+      grid-template-areas: "reactype-desc reactype-img" "speed-typer-desc speed-typer-img" "chrome-stretch-desc chrome-stretch-img";
   row-gap: 25px;
   -webkit-column-gap: 25px;
           column-gap: 25px;
@@ -564,9 +564,9 @@ header {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: 'reactype-img' 'reactype-desc' 'speed-typer-img' 'speed-typer-desc' 'chrome-stretch-img' 'chrome-stretch-desc';
+        grid-template-areas: "reactype-img" "reactype-desc" "speed-typer-img" "speed-typer-desc" "chrome-stretch-img" "chrome-stretch-desc";
   }
-  .projects__images--reactype {
+  .projects__images--reactype, .projects__images--speed-typer {
     width: 200px;
   }
 }

@@ -15,7 +15,7 @@ $navbar-text-scrolled: white;
 }
 
 * {
-  font-family: 'Saira', sans-serif;
+  font-family: "Saira", sans-serif;
 }
 
 body {
@@ -73,7 +73,7 @@ header {
   }
 
   &__link::after {
-    content: '';
+    content: "";
     display: block;
     height: 2px;
     width: 0%;
@@ -386,7 +386,7 @@ header {
     text-indent: -1em;
 
     li:before {
-      content: '\00BB \0020';
+      content: "\00BB \0020";
       padding-right: 5px;
     }
   }
@@ -401,9 +401,9 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    'reactype-desc reactype-img'
-    'speed-typer-desc speed-typer-img'
-    'chrome-stretch-desc chrome-stretch-img';
+    "reactype-desc reactype-img"
+    "speed-typer-desc speed-typer-img"
+    "chrome-stretch-desc chrome-stretch-img";
   row-gap: 25px;
   column-gap: 25px;
   border-radius: 5px;
@@ -491,15 +491,16 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      'reactype-img'
-      'reactype-desc'
-      'speed-typer-img'
-      'speed-typer-desc'
-      'chrome-stretch-img'
-      'chrome-stretch-desc';
+      "reactype-img"
+      "reactype-desc"
+      "speed-typer-img"
+      "speed-typer-desc"
+      "chrome-stretch-img"
+      "chrome-stretch-desc";
 
     &__images {
-      &--reactype {
+      &--reactype,
+      &--speed-typer {
         width: 200px;
       }
     }
