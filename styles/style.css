@@ -276,6 +276,7 @@ header {
 }
 
 .about__resume-button {
+  margin-top: 10px;
   cursor: pointer;
 }
 
